@@ -10,13 +10,14 @@ import Foundation
 
 class SessionController {
     
+    var session: GameSession?
     
     func newGameSession(with instrument: String, level: Int)-> GameSession {
         let gameSession = GameSession(instrumentType: instrument, level: level)
+        self.session = gameSession
         return gameSession
     }
-
-
+    
     
 }
 
