@@ -79,9 +79,12 @@ class AcousticGuitar: Instrument {
 
 class ElectricGuitar: Instrument {
     
+    let name = "ElectricPiano"
+    
 }
 class ElectronicPiano: Instrument {
     
+    let name = "ElectronicPiano"
 }
 
 enum InstrumentType: String {
