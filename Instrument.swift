@@ -77,10 +77,18 @@ class AcousticGuitar: Instrument {
 
 }
 
+class ElectricGuitar: Instrument {
+    
+}
+class ElectronicPiano: Instrument {
+    
+}
+
 enum InstrumentType: String {
     case grandPiano = "GrandPiano"
     case accousticGuitar = "AccousticGuitar"
-    
+    case electricGuitar = "ElectricGuitar"
+    case electronicPiano = "ElectronicPiano"
 }
 
 
