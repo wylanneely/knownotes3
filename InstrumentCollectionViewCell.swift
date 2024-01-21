@@ -13,5 +13,9 @@ class InstrumentCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    
+    @IBOutlet weak var instrumentImageView: UIImageView!
+    
+    @IBOutlet weak var instrumentLabel: UILabel!
 }
