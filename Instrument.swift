@@ -6,19 +6,27 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Instrument {
     
     var type: InstrumentType = .grandPiano
     var notes: [Note] = []
     
+    func instrumentImage()-> UIImage? {
+        
+        switch self.type {
+        case .accousticGuitar : return UIImage(named: "AcousticGuitar")
+        case .electricGuitar : return UIImage(named: "ElectricGuitar")
+        case .grandPiano : return UIImage(named: "grandpiano")
+        case .electronicPiano : return UIImage(named: "ElectronicPiano")
+        }
+    }
+    
 }
 
 class GrandPiano: Instrument {
     
-    let name = "GrandPiano"
-
     override init() {
         super.init()
         self.type = .grandPiano
@@ -52,9 +60,7 @@ class GrandPiano: Instrument {
 }
 
 class AcousticGuitar: Instrument {
-    
-    let name = "AccousticGuitar"
-    
+        
     override init() {
         super.init()
         self.type = .accousticGuitar
