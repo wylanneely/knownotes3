@@ -9,13 +9,23 @@ import UIKit
 
 class InstrumentCollectionViewCell: UICollectionViewCell {
 
+    
+    var selectedInstrument: Instrument?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        if let selectedInstrument {
+            let instrumentImage = selectedInstrument.instrumentImage()
+            if (instrumentImage != nil) {
+                instrumentImageView.image = instrumentImage
+            }
+        }
     }
     
     
     @IBOutlet weak var instrumentImageView: UIImageView!
-    
     @IBOutlet weak var instrumentLabel: UILabel!
+    
+    
 }
