@@ -17,13 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="213" height="210"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grandpiano.png" translatesAutoresizingMaskIntoConstraints="NO" id="rur-AA-2hB">
-                        <rect key="frame" x="11" y="7" width="195" height="165"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grandpiano.png" translatesAutoresizingMaskIntoConstraints="NO" id="rur-AA-2hB">
+                        <rect key="frame" x="9" y="0.0" width="195" height="165"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GrandPiano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oC-Sr-DnF">
-                        <rect key="frame" x="62" y="176" width="89" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrandPiano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oC-Sr-DnF">
+                        <rect key="frame" x="62" y="181" width="89" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -31,6 +29,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="rur-AA-2hB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="6bY-wv-2ts"/>
+                <constraint firstAttribute="bottom" secondItem="0oC-Sr-DnF" secondAttribute="bottom" constant="8" id="72f-9e-9Z8"/>
+                <constraint firstItem="0oC-Sr-DnF" firstAttribute="top" secondItem="rur-AA-2hB" secondAttribute="bottom" constant="16" id="WJJ-jE-K7D"/>
+                <constraint firstAttribute="trailing" secondItem="rur-AA-2hB" secondAttribute="trailing" constant="8" id="gxD-eE-kUb"/>
+                <constraint firstItem="rur-AA-2hB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="me9-id-oJB"/>
+                <constraint firstItem="0oC-Sr-DnF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xJb-X4-GWe"/>
+            </constraints>
             <size key="customSize" width="213" height="210"/>
             <connections>
                 <outlet property="instrumentImageView" destination="rur-AA-2hB" id="PQA-F7-dwP"/>
