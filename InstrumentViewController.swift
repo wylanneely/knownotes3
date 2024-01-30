@@ -14,7 +14,6 @@ class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICo
 
        }
     
-    
     //MARK: - Outlets
     
     @IBOutlet weak var collection: UICollectionView!
