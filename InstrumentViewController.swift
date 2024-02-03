@@ -9,6 +9,9 @@ import UIKit
 
 class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
+    var userData: UserData?
+    
        override func viewDidLoad() {
            super.viewDidLoad()
 
