@@ -18,8 +18,8 @@ class Instrument {
         switch self.type {
         case .accousticGuitar : return UIImage(named: "AcousticGuitar")
         case .electricGuitar : return UIImage(named: "ElectricGuitar")
-        case .grandPiano : return UIImage(named: "grandpiano")
-        case .electronicPiano : return UIImage(named: "ElectronicPiano")
+        case .grandPiano : return UIImage(named: "GrandPiano")
+        case .violin : return UIImage(named: "Violin")
         }
     }
     
@@ -88,16 +88,16 @@ class ElectricGuitar: Instrument {
     let name = "ElectricPiano"
     
 }
-class ElectronicPiano: Instrument {
+class Violin: Instrument {
     
-    let name = "ElectronicPiano"
+    let name = "Violin"
 }
 
 enum InstrumentType: String {
     case grandPiano = "GrandPiano"
     case accousticGuitar = "AccousticGuitar"
     case electricGuitar = "ElectricGuitar"
-    case electronicPiano = "ElectronicPiano"
+    case violin = "Violin"
 }
 
 
