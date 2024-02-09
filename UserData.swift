@@ -41,7 +41,9 @@ class UserData {
     var isEGRound2Unlocked: Bool = false
     var isEGRound3Unlocked: Bool = false
     
-    init(isGrandPianoUnlocked: Bool, isAccGuitarUnlocked: Bool, isViolinUnlocked: Bool, isElectricGuitarUnlocked: Bool, grandPianoHScore: Int, accGuitarHScore: Int, violinHScore: Int, electricGuitarHScore: Int) {
+    init(isGrandPianoUnlocked: Bool,isAccGuitarUnlocked: Bool,isViolinUnlocked: Bool,
+         isElectricGuitarUnlocked: Bool, grandPianoHScore: Int, accGuitarHScore: Int,
+         violinHScore: Int, electricGuitarHScore: Int) {
         self.isGrandPianoUnlocked = isGrandPianoUnlocked
         self.isAccGuitarUnlocked = isAccGuitarUnlocked
         self.isViolinUnlocked = isViolinUnlocked
@@ -95,7 +97,6 @@ class UserData {
             self.isEGRound3Unlocked = true
         }
     }
-    
 }
 
 class UserController {
@@ -151,8 +152,6 @@ class UserController {
         }
     }
 
-    
-    
     
     //MARK: - UserDefaults Keys
     //instruments
