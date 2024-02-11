@@ -19,6 +19,7 @@ class StartPageViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
+        //ifdoestwork, change code below to viewDidLoad()
         if let savedUserData = UserDataController.getUserData() {
                     self.userData = savedUserData
                 }
@@ -33,6 +34,4 @@ class StartPageViewController: UIViewController {
         }
     }
 
-    
-    
 }
