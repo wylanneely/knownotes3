@@ -84,12 +84,9 @@ class AcousticGuitar: Instrument {
 }
 
 class ElectricGuitar: Instrument {
-    
     let name = "ElectricPiano"
-    
 }
 class Violin: Instrument {
-    
     let name = "Violin"
 }
 
