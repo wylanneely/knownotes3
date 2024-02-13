@@ -12,10 +12,14 @@ class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var userData: UserData?
     
+    @IBOutlet weak var instrumentsCollectionView: UICollectionView!
+    
+    
        override func viewDidLoad() {
            super.viewDidLoad()
-
-       }
+           self.instrumentsCollectionView.dataSource = self
+                  // register the cells, so the collectionView will "know" which cell you are referring to.
+           self.instrumentsCollectionView.register(UINib(nibName: "InstrumentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InstrumentCell")       }
     
     //MARK: - Outlets
     
