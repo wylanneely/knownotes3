@@ -11,19 +11,17 @@ class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     var userData: UserData?
-    
-    @IBOutlet weak var instrumentsCollectionView: UICollectionView!
-    
+        
     
        override func viewDidLoad() {
            super.viewDidLoad()
-           self.instrumentsCollectionView.dataSource = self
+           self.collectionView.dataSource = self
                   // register the cells, so the collectionView will "know" which cell you are referring to.
-           self.instrumentsCollectionView.register(UINib(nibName: "InstrumentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InstrumentCell")       }
+           self.collectionView.register(UINib(nibName: "InstrumentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InstrumentCell")       }
     
     //MARK: - Outlets
     
-    @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - CollectionView
     
@@ -36,10 +34,14 @@ class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            return UICollectionViewCell()
-    }
+        //if this doesnt work then change instrumentsCollectionView to collectionView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customReuseIdentifier", for: indexPath) as! InstrumentCollectionViewCell
+               // cast the cell as CustomCollectionViewCell to access any property you set inside the custom cell.
+               // dequeue cell by the reuseIdentifier, "explain" to the collectionView which cell you are talking about.
+               return cell    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 
 }
