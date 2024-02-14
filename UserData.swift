@@ -17,6 +17,23 @@ class UserData {
     var isViolinUnlocked:Bool = false
     var isElectricGuitarUnlocked: Bool = false
     
+    func returnUnlockedInstruments()->[InstrumentType] {
+        let grandPiano: InstrumentType = .grandPiano
+        let accousticGuitar: InstrumentType = .accousticGuitar
+        let violin: InstrumentType = .violin
+        let electricGuitar: InstrumentType = .electricGuitar
+        
+        if isElectricGuitarUnlocked {
+            return [electricGuitar,violin,accousticGuitar,grandPiano]
+        } else if isViolinUnlocked {
+            return [violin,accousticGuitar,grandPiano]
+        } else if isAccGuitarUnlocked {
+            return [accousticGuitar,grandPiano]
+        } else {
+           return [grandPiano]
+        }
+        
+    }
     //MARK: - High Scores
     
     var grandPianoHScore: Int = 0
@@ -30,7 +47,6 @@ class UserData {
     var isGPRound1Unlocked: Bool = true
     var isGPRound2Unlocked: Bool = false
     var isGPRound3Unlocked: Bool = false
-    
     //Accoustic Guitar // if instrument is unlocked, round1 is unlocked
     var isAGRound2Unlocked: Bool = false
     var isAGRound3Unlocked: Bool = false
@@ -97,10 +113,12 @@ class UserData {
             self.isEGRound3Unlocked = true
         }
     }
+    
+    
 }
 
 class UserController {
-    
+        
     //MARK: - Create
     
     func getUserData()->UserData? {
@@ -121,7 +139,7 @@ class UserController {
     //MARK: - Save
     func saveHighScore(score:Int, type: InstrumentType){
         switch type {
-            //if scoreis higher than 30 it will unlock the next instrument
+            //if score is higher than 30 it will unlock the next instrument
         case .grandPiano:
             UserDefaults.standard.setValue(score, forKey: keyGrandPianoHS)
             if score >= 40 { UserDefaults.standard.setValue(true, forKey: keyIsAccGuitar) }
@@ -137,7 +155,7 @@ class UserController {
     }
     
     func setDefaultDataValues(){
-        //function to set the default values of the main UDerData components
+        //function to set the default values of the main UserData components
         if UserDefaults.standard.object(forKey: keyGrandPianoHS) == nil {
             //user high scores
             let score: Int = 0
