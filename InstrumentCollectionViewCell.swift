@@ -8,9 +8,10 @@
 import UIKit
 
 class InstrumentCollectionViewCell: UICollectionViewCell {
-
     
     var selectedInstrument: Instrument?
+    var instrumentType: InstrumentType?
+    var isInstrumentUnlocked: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,9 +24,7 @@ class InstrumentCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    
     @IBOutlet weak var instrumentImageView: UIImageView!
     @IBOutlet weak var instrumentLabel: UILabel!
-    
-    
+
 }
