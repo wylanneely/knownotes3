@@ -9,18 +9,15 @@ import UIKit
 
 class InstrumentCollectionViewCell: UICollectionViewCell {
     
-    var selectedInstrument: Instrument?
+    var image: UIImage?
     var instrumentType: InstrumentType?
-    var isInstrumentUnlocked: Bool = true
+    var isUnlocked: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        if let selectedInstrument {
-            let instrumentImage = selectedInstrument.instrumentImage()
-            if (instrumentImage != nil) {
-                instrumentImageView.image = instrumentImage
-            }
+        if let image {
+                instrumentImageView.image = image
         }
     }
     
