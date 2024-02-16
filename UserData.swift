@@ -10,6 +10,18 @@ import Foundation
 
 class UserData {
     
+    //eventually add instruments to here instead of type
+    let grandPiano: InstrumentType = .grandPiano
+    let accousticGuitar: InstrumentType = .accousticGuitar
+    let violin: InstrumentType = .violin
+    let electricGuitar: InstrumentType = .electricGuitar
+    
+    let GP: Instrument = GrandPiano()
+    let AC: Instrument = AcousticGuitar()
+    let V: Instrument = Violin()
+    let EG: Instrument = ElectricGuitar()
+    
+    
     //MARK: - Instruments Unlocked
     
     var isGrandPianoUnlocked: Bool = true
