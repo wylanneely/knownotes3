@@ -36,8 +36,19 @@ class InstrumentViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //if this doesnt work then change instrumentsCollectionView to collectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customReuseIdentifier", for: indexPath) as! InstrumentCollectionViewCell
-               // cast the cell as CustomCollectionViewCell to access any property you set inside the custom cell.
-               // dequeue cell by the reuseIdentifier, "explain" to the collectionView which cell you are talking about.
+        guard let userData = userData else {
+            printContent("Error unwrapping userdata")
+            return cell
+        }
+        
+        switch indexPath.row {
+        case 0: cell.instrumentType = userData.grandPiano
+        case 1: cell.instrumentType = userData.accousticGuitar
+        case 2: cell.instrumentType = userData.violin
+        case 3: cell.instrumentType = userData.electricGuitar
+        default:
+            break
+        }
                return cell    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
