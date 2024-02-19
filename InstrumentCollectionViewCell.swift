@@ -17,7 +17,13 @@ class InstrumentCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         if let image {
+            if isUnlocked {
                 instrumentImageView.image = image
+            } else {
+                if let bWImage = image.returnBlackWhiteImage() {
+                    instrumentImageView.image = image.returnBlackWhiteImage()
+                }
+            }
         }
     }
     
