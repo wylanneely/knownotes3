@@ -21,7 +21,7 @@ class InstrumentCollectionViewCell: UICollectionViewCell {
                 instrumentImageView.image = image
             } else {
                 if let bWImage = image.returnBlackWhiteImage() {
-                    instrumentImageView.image = image.returnBlackWhiteImage()
+                    instrumentImageView.image = bWImage
                 }
             }
         }
